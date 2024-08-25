@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply scroll-smooth;
+}
+body {
+  @apply box-border text-gray-100 bg-gray-900;
+}
+.btn-primary {
+  @apply flex items-center gap-2 px-6 py-3 mx-auto font-semibold text-white rounded-full bg-cyan-600 md:mx-0;
+}
+
+.aboutImg::after {
+  @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-gray-600 -z-10;
+}
+
+.slick-slide > div{
+  margin: 0 10px;
+}
+
+input,
+textarea {
+  @apply p-3 bg-gray-700 rounded-lg outline-none;
+}
+::placeholder {
+  @apply text-lg;
+}
+
+::selection {
+  @apply bg-cyan-600;
+}
