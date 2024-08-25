@@ -7,7 +7,7 @@ const AppRouter = () => {
     <>
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
-          <Route index path="/home" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="/resume" element={<Resume />} />
         </Routes>
       </BrowserRouter>

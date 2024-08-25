@@ -7,15 +7,15 @@ const Navbar: FC<{ isResume?: boolean }> = ({ isResume }) => {
   const [open, setOpen] = useState(false);
   const menuLinks = isResume
     ? [
-        { name: "HOME", link: "/home" },
+        { name: "HOME", link: "/#home" },
         { name: "RESUME", link: "/resume" },
       ]
     : [
-        { name: "HOME", link: "/home#home" },
-        { name: "ABOUT", link: "/home#about" },
-        { name: "PROJECTS", link: "/home#projects" },
+        { name: "HOME", link: "#home" },
+        { name: "ABOUT", link: "#about" },
+        { name: "PROJECTS", link: "#projects" },
         { name: "RESUME", link: "/resume" },
-        { name: "CONTACT", link: "/home#contact" },
+        { name: "CONTACT", link: "#contact" },
       ];
 
   useEffect(() => {
