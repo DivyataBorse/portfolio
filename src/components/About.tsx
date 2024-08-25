@@ -17,7 +17,7 @@ const About = () => {
 
               <br />
               <br />
-              <a href="./src/assets/Code_a_program.pdf" download>
+              <a href="./src/assets/DivyataBorse.pdf" download>
                 <button className="btn-primary">
                   <FiDownload /> Resume
                 </button>
