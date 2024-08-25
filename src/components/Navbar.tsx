@@ -23,6 +23,7 @@ const Navbar: FC<{ isResume?: boolean }> = ({ isResume }) => {
       window.scrollY > 0 ? setSticky(true) : setSticky(false);
     });
   }, []);
+  
   return (
     <nav
       className={`fixed w-full left-0 top-0 z-[999] ${
