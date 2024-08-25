@@ -5,10 +5,10 @@ import Resume from "../components/Resume";
 const AppRouter = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
-            <Route index path="/" element={<Home />} />
-            <Route path="/resume"element={<Resume/>}/>
+          <Route index path="/" element={<Home />} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </BrowserRouter>
     </>
