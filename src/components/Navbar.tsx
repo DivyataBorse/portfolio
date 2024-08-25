@@ -7,15 +7,15 @@ const Navbar: FC<{ isResume?: boolean }> = ({ isResume }) => {
   const [open, setOpen] = useState(false);
   const menuLinks = isResume
     ? [
-        { name: "HOME", link: "/#home" },
+        { name: "HOME", link: "/home" },
         { name: "RESUME", link: "/resume" },
       ]
     : [
-        { name: "HOME", link: "#home" },
-        { name: "ABOUT", link: "#about" },
-        { name: "PROJECTS", link: "#projects" },
+        { name: "HOME", link: "/home#home" },
+        { name: "ABOUT", link: "/home#about" },
+        { name: "PROJECTS", link: "/home#projects" },
         { name: "RESUME", link: "/resume" },
-        { name: "CONTACT", link: "#contact" },
+        { name: "CONTACT", link: "/home#contact" },
       ];
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Navbar: FC<{ isResume?: boolean }> = ({ isResume }) => {
       window.scrollY > 0 ? setSticky(true) : setSticky(false);
     });
   }, []);
-  
+
   return (
     <nav
       className={`fixed w-full left-0 top-0 z-[999] ${
