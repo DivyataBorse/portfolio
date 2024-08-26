@@ -1,5 +1,6 @@
 import aboutImg from "../assets/images/about.png";
 import { FiDownload } from "react-icons/fi";
+import resume from "./../assets/DivyataBorse.pdf";
 
 const About = () => {
   
@@ -12,12 +13,12 @@ const About = () => {
             <div className="my-3 text-gray-300">
               <p className="w-11/12 mx-auto leading-7 text-justify">
                 Hi I am Divyata Borse, Computer Engineer graduated from MVPs KBT
-                college of Engineering, Nashik. I am currently pursuing the Post Graduate Diploma in Advanced Computing (PG-DAC) at the Centre for Development of Advanced Computing (CDAC). 
+                college of Engineering, Nashik. I am currently pursuing the Post Graduate Diploma in Big Data Analytics (PG-DBDA) at the Centre for Development of Advanced Computing (CDAC). 
               </p>
 
               <br />
               <br />
-              <a href="./src/assets/DivyataBorse.pdf" download>
+              <a href={resume} download>
                 <button className="btn-primary">
                   <FiDownload /> Resume
                 </button>

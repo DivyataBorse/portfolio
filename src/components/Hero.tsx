@@ -1,11 +1,18 @@
 import hero from "../assets/images/hero.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { TbFileCv } from "react-icons/tb";
 
 const Hero = () => {
   const social_media = [
-    <FaGithub className="text-white" />,
-    <FaLinkedin className="text-[#0A66C2]" />,
+    {
+      icon: <FaGithub className="text-white" />,
+      link: "https://github.com/DivyataBorse",
+    },
+    {
+      icon: <FaLinkedin className="text-[#0A66C2]" />,
+      link: "https://www.linkedin.com/in/divyata-borse-3452aa249/",
+    },
   ];
   return (
     <section
@@ -32,16 +39,21 @@ const Hero = () => {
             Computer Engineer
           </h4>
           <Link to={"/resume"}>
-            <button className="mt-8 btn-primary">Resume</button>
+            <button className="mt-8 btn-primary">
+              <TbFileCv />
+              Resume
+            </button>
           </Link>
           <div className="flex items-center justify-center gap-5 mt-8 text-3xl md:justify-start">
-            {social_media?.map((icon) => (
-              <div
-                key={String(icon)}
-                className="text-gray-600 cursor-pointer hover:text-white "
+            {social_media?.map((item) => (
+              <a
+                key={String(item)}
+                href={item.link}
+                target="_blank"
+                className="text-gray-600 cursor-pointer hover:text-white hover:shadow-2xl "
               >
-                {icon}
-              </div>
+                {item.icon}
+              </a>
             ))}
           </div>
         </div>
