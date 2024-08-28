@@ -72,7 +72,11 @@ const Navbar: FC<{ isResume?: boolean }> = ({ isResume }) => {
                 key={i}
                 className="px-6 hover:text-cyan-600"
               >
-                <Link to={menu?.link}>{menu?.name}</Link>
+                {menu?.link.includes("#") ? (
+                  <a href={menu?.link}>{menu?.name}</a>
+                ) : (
+                  <Link to={menu?.link}>{menu?.name}</Link>
+                )}
               </li>
             ))}
           </ul>
